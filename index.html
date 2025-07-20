@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Stopwatch</title>
+    <!-- Tailwind CSS CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    
+    <div id="stopwatchContainer" class="stopwatch-container">
+        <!-- Theme Selector -->
+        <div class="mb-6 w-full flex justify-end">
+            <label for="theme-select" class="sr-only">Choose a theme</label>
+            <select id="theme-select" class="p-2 rounded-md border border-gray-300 bg-white text-gray-700 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                <option value="default">Default</option>
+                <option value="dark">Dark Mode</option>
+                <option value="minimalist">Minimalist</option>
+            </select>
+        </div>
+<h1 class="text-4xl font-extrabold text-gray-900 mb-8 text-center"> STOP WATCH</h1>
+        <!-- Stopwatch Display -->
+        <div id="display" class="mb-8 text-6xl font-bold text-gray-800 bg-gray-100 p-6 rounded-2xl shadow-inner">
+            00:00:00.000
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mb-6 w-full">
+            <button id="startBtn" class="btn btn-start flex-grow sm:flex-none">Start</button>
+            <button id="pauseBtn" class="btn btn-pause flex-grow sm:flex-none" disabled>Pause</button>
+            <button id="resetBtn" class="btn btn-reset flex-grow sm:flex-none" disabled>Reset</button>
+            <button id="lapBtn" class="btn btn-lap flex-grow sm:flex-none" disabled>Lap</button>
+        </div>
+
+        <!-- Lap Times Display -->
+        <div class="w-full">
+            <h2 class="text-xl font-semibold text-gray-700 mb-4 text-center">Lap Times</h2>
+            <ul id="lap-list" class="bg-gray-50 p-4 rounded-xl shadow-inner border border-gray-200">
+                <!-- Lap times will be inserted here by JavaScript -->
+                <li class="text-gray-500 text-center py-2">No laps recorded yet.</li>
+            </ul>
+        </div>
+    </div>
+
+          <script src="index.js"></script>
+    
+</body>
+</html>
